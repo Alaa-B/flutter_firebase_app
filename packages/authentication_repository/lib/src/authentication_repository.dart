@@ -1,11 +1,10 @@
-import 'dart:async';
-
-import 'package:auth_repo/auth_repo.dart';
-import 'package:cache/cache.dart';
-import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:meta/meta.dart';
+
+import '../src/models/user.dart';
+import 'package:cache/cache.dart';
 
 class SignUpWithEmailAndPasswordFailure implements Exception {
   const SignUpWithEmailAndPasswordFailure([
