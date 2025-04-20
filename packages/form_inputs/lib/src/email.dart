@@ -2,11 +2,10 @@ import 'package:formz/formz.dart';
 
 enum EmailValidationError { invalid }
 
-class Email extends FormzInput<String, EmailValidationError>
-    with FormzInputErrorCacheMixin {
-  Email.pure([super.value = '']) : super.pure();
+class Email extends FormzInput<String, EmailValidationError> {
+  const Email.pure([super.value = '']) : super.pure();
 
-  Email.dirty([super.value = '']) : super.dirty();
+  const Email.dirty([super.value = '']) : super.dirty();
 
   static final _emailRegExp = RegExp(
     r'^[a-zA-Z\d.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z\d-]+(?:\.[a-zA-Z\d-]+)*$',
